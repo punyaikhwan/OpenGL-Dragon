@@ -7,10 +7,13 @@
 3. Buka cmd di folder yang ada get-pip.py, lalu:
   > python get-pip.py
 4. Install pyglet.
-  > python install pyglet
+  > pip install pyglet
 5. Buka editor teks, ketik:
   > import pyglet  
     from pyglet.gl import *
 
-6. Contoh jalankan saja cube.py
+6. Install PyOpenGL
+  > pip install PyOpenGL
+  
+7. Contoh jalankan saja cube.py
   > python cube.py
