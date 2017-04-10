@@ -1,5 +1,5 @@
 # OpenGL-Dragon
-## Using Pyglet by Open GL
+## Using Pygame by PyOpenGL
 
 ## Langkah-langkah instalasi di Windows
 1. Download Python
