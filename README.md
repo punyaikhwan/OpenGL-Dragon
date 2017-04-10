@@ -1,5 +1,7 @@
 # OpenGL-Dragon
-## Using Pygame by PyOpenGL
+## Using Pygame and PyOpenGL
+## Python version 2.7
+
 ![](https://lh3.googleusercontent.com/-EPEXk7OnWb4/WOtfDWLWIWI/AAAAAAAACFo/n0auB5QSQlQnGjSwVaGKg6RQEVWma6C4QCEw/h120/Capture.PNG)
 
 ## Langkah-langkah instalasi di Windows
