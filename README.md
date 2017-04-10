@@ -9,7 +9,7 @@
 4. Install pyglet.
   > python install pyglet
 5. Buka editor teks, ketik:
-  > import pyglet
+  > import pyglet  
     from pyglet.gl import *
 
 6. Contoh jalankan saja cube.py
