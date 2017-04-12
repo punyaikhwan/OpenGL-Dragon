@@ -230,6 +230,20 @@ pointMouth = [
     [194,152]
     ]
 
+pointLidah = [
+    [198,161],
+    [205,158],
+    [212,163],
+    [215,167],
+    [219,163],
+    [227,168],
+    [234,176],
+    [225,176],
+    [215,174],
+    [207,172],
+    [200,170]
+    ]
+
 pointLeftEyes = [
     [218,67],
     [230,69],
@@ -291,7 +305,8 @@ while not done:
 
     #draw dragon
     pygame.draw.polygon(screen, GREEN, pointDragon, 0)
-    pygame.draw.polygon(screen, YELLOW, pointMouth, 0)
+    pygame.draw.polygon(screen, WHITE, pointMouth, 0)
+    pygame.draw.polygon(screen, YELLOW, pointLidah, 0)
     pygame.draw.polygon(screen, WHITE, pointLeftEyes, 0)
     pygame.draw.polygon(screen, BLACK, pointLeftRetina, 0)
 
