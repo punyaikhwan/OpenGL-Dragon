@@ -10,7 +10,7 @@ WHITE = (255, 255, 255)
 BLUE = (0, 0, 255)
 GREEN = (0, 255, 0)
 RED = (255, 0, 0)
-YELLOW = (198,152,57)
+YELLOW = (240,228,0)
  
 PI = 3.141592653
  
@@ -229,7 +229,53 @@ pointMouth = [
     [196,153],
     [194,152]
     ]
-    
+
+pointLeftEyes = [
+    [218,67],
+    [230,69],
+    [237,77],
+    [240,89],
+    [238,102],
+    [231,110],
+    [225,114],
+    [215,110],
+    [206,108],
+    [202,97],
+    [202,87],
+    [209,77]
+    ]
+
+pointLeftRetina = [
+    [212,81],
+    [222,84],
+    [223,96],
+    [220,105],
+    [215,111],
+    [206,106],
+    [203,98],
+    [201,88]
+    ]
+
+pointRightEyes = [
+    [259,76],
+    [268,82],
+    [272,94],
+    [272,104],
+    [267,115],
+    [255,118], #
+    [250,106],
+    [247,95],
+    [250,85]
+    ]
+
+pointRightRetina = [
+    [255,118], #
+    [250,106],
+    [247,95],
+    [256,92],
+    [264,102],
+    [263,113]
+    ]
 # Loop as long as done == False
 while not done:
  
@@ -244,8 +290,13 @@ while not done:
     screen.fill(RED)
 
     #draw dragon
-    pygame.draw.polygon(screen, WHITE, pointDragon, 0)
+    pygame.draw.polygon(screen, GREEN, pointDragon, 0)
     pygame.draw.polygon(screen, YELLOW, pointMouth, 0)
+    pygame.draw.polygon(screen, WHITE, pointLeftEyes, 0)
+    pygame.draw.polygon(screen, BLACK, pointLeftRetina, 0)
+
+    pygame.draw.polygon(screen, WHITE, pointRightEyes, 0)
+    pygame.draw.polygon(screen, BLACK, pointRightRetina, 0)
     '''pygame.draw.line(screen, WHITE, [82, 14], [291, 44], 1)
     pygame.draw.line(screen, WHITE, [82, 14], [278, 47], 1)
     pygame.draw.line(screen, WHITE, [79, 69], [278, 47], 1)
