@@ -64,14 +64,23 @@ void userdraw() {
     point2D_t kotak[4]={{-256,256},{256,256},{256,-256},{-256,-256}};
 	color_t col[4]={{133, 193, 233},{ 52, 152, 219 },{ 40, 116, 166 },{ 52, 152, 219 }};
 	gradatePolygon(kotak,col,4);
-/*
-   // matahari
-    point2D_t suns[97];
-    color_t csuns={0.7,0.5,0};
-    //setColor(0,0,0);
-    createCircle(suns,97,90);
-    drawPolygon(suns,90);
-    fillPolygon(suns,csuns,90);*/
+
+   // Membuat bukit 1 kanan
+    point2D_t gunung1[4]={{-100,-256},{130,-120},{256,-230},{256,-256}};
+    color_t colGunung1[4]={{39, 174, 96},{35, 155, 86},{25, 111, 61},{35,155,86}};
+    gradatePolygon(gunung1,colGunung1,4);
+
+    // Membuat bukit 2 kiri
+    point2D_t gunung2[3]={{-256,-256},{-120,-120},{20,-256}};
+    color_t colGunung2[3]={{39, 174, 96},{35, 155, 86},{25, 111, 61}};
+    gradatePolygon(gunung2,colGunung2,3);
+
+    // Membuat bukit 3 kiri
+    point2D_t gunung3[4]={{-120,-256},{100,-160},{130,-156},{256,-256}};
+    color_t colGunung3[4]={{ 40, 180, 99 },{35, 155, 86},{ 40, 180, 99 },{35,255,86}};
+    gradatePolygon(gunung3,colGunung3,4);
+
+
 }
 
 void display(void) {
