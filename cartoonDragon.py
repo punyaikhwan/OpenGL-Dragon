@@ -9,6 +9,7 @@ BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 BLUE = (0, 0, 255)
 GREEN = (0, 255, 0)
+GREENTUA = (34,177,76)
 RED = (255, 0, 0)
 YELLOW = (240,228,0)
  
@@ -290,6 +291,200 @@ pointRightRetina = [
     [264,102],
     [263,113]
     ]
+
+wingright1 = [
+    [34, 42],
+    [60, 66],
+    [75, 84],
+    [89, 111],
+    [99, 137],
+    [104, 150],
+    [81, 142],
+    [57, 149],
+    [31, 164],
+    [40, 144],
+    [44, 130],
+    [45, 118],
+    [45, 101],
+    [48, 87],
+    [46, 72]
+    ]
+
+wingright2 = [
+    [31, 165],
+    [58, 158],
+    [80, 153],
+    [104, 158],
+    [97, 179],
+    [68, 232],
+    [67, 216],
+    [67, 205],
+    [61, 191],
+    [55, 182],
+    [44, 172]
+    ]
+
+wingright3 = [
+    [68, 232],
+    [113, 169],
+    [119, 197],
+    [116, 261],
+    [104, 247],
+    [90, 239],
+    [78, 234]
+    ]  
+
+wingright4 = [
+    [119, 197],
+    [128, 189],
+    [128, 176],
+    [163, 200],
+    [137, 233],
+    [136, 250],
+    [127, 252]
+    ]
+
+wingleft1 = [
+    [211, 213],
+    [239, 208],
+    [260, 202],
+    [284, 186],
+    [269, 221],
+    [262, 237],
+    [237, 236]
+    ]
+
+wingleft2 = [
+    [295, 186],
+    [283, 208],
+    [278, 227],
+    [274, 239],
+    [295, 239],
+    [278, 246],
+    [294, 253],
+    [278, 255],
+    [287, 262],
+    [300, 258],
+    [322, 255],
+    [337, 254],
+    [317, 241],
+    [303, 212]
+    ]
+
+wingleft3 = [
+    [301, 179],
+    [317, 223],
+    [337, 254],
+    [338, 239],
+    [341, 222],
+    [347, 210],
+    [358, 197],
+    [369, 190],
+    [378, 185],
+    [355, 183],
+    [327, 178]
+    ]
+
+wingleft4 = [
+    [297, 169],
+    [324, 169],
+    [351, 174],
+    [378, 183],
+    [372, 175],
+    [368, 163],
+    [365, 149],
+    [364, 134],
+    [367, 119],
+    [370, 104],
+    [377, 95],
+    [342, 117],
+    [317, 142]
+    ]
+
+handright = [
+    [171, 191],
+    [161, 204],
+    [146, 222],
+    [135, 249],
+    [140, 255],
+    [150, 264],
+    [168,274],
+    [177, 289],
+    [187, 297],
+    [182, 279],
+    [199, 289],
+    [187, 273],
+    [209, 276],
+    [191, 266],
+    [212, 257],
+    [189, 256],
+    [191, 239],
+    [180, 254],
+    [162, 246],
+    [157, 235],
+    [177, 217],
+    [181, 197]
+    ]
+
+
+pointPerut = [
+    [188,170],
+    [187,194],
+    [188,209],
+    [188,223],
+    [188,241],
+    [192,258],
+    [209,262],
+    [191,265],
+    [210,279],
+    [188,274],
+    [198,288],
+    [180,281],
+    [186,291],
+    [197,298],
+    [205,321],
+    [195,347],
+    [176,363],
+    [206,367],
+    [218,367],
+    [247,347],
+    [259,330],
+    [256,315],
+    [260,299],
+    [251,288],
+    [250,274],
+    [237,266],
+    [235,254],
+    [222,243],
+    [212,220],
+    [208,204],
+    [203,194],
+    [202,184],
+    [193,181]
+    ]
+
+footright = [
+    [149, 296],
+    [168, 287],
+    [177, 290],
+    [187, 296],
+    [195, 293],
+    [205,321],
+    [195,347],
+    [176,363],
+    [206,367],
+    [205,379],
+    [195,389],
+    [184,390], #
+    [170,392],
+    [157,384],
+    [145,372],
+    [134,375],
+    [128,366],
+    [135,356],
+    [144,349],
+    [133, 305]
+    ]
 # Loop as long as done == False
 while not done:
  
@@ -304,7 +499,7 @@ while not done:
     screen.fill(RED)
 
     #draw dragon
-    pygame.draw.polygon(screen, GREEN, pointDragon, 0)
+    pygame.draw.polygon(screen, GREENTUA, pointDragon, 0)
     pygame.draw.polygon(screen, WHITE, pointMouth, 0)
     pygame.draw.polygon(screen, YELLOW, pointLidah, 0)
     pygame.draw.polygon(screen, WHITE, pointLeftEyes, 0)
@@ -312,6 +507,20 @@ while not done:
 
     pygame.draw.polygon(screen, WHITE, pointRightEyes, 0)
     pygame.draw.polygon(screen, BLACK, pointRightRetina, 0)
+
+    pygame.draw.polygon(screen, YELLOW, wingright1, 0)
+    pygame.draw.polygon(screen, YELLOW, wingright2, 0)
+    pygame.draw.polygon(screen, YELLOW, wingright3, 0)
+    pygame.draw.polygon(screen, YELLOW, wingright4, 0)
+    pygame.draw.polygon(screen, YELLOW, wingleft1, 0)
+    pygame.draw.polygon(screen, YELLOW, wingleft2, 0)
+    pygame.draw.polygon(screen, YELLOW, wingleft3, 0)
+    pygame.draw.polygon(screen, YELLOW, wingleft4, 0)
+
+    pygame.draw.polygon(screen, YELLOW, pointPerut, 0)
+    pygame.draw.polygon(screen, GREEN, handright, 0)
+    pygame.draw.polygon(screen, GREEN, footright, 0)
+
     '''pygame.draw.line(screen, WHITE, [82, 14], [291, 44], 1)
     pygame.draw.line(screen, WHITE, [82, 14], [278, 47], 1)
     pygame.draw.line(screen, WHITE, [79, 69], [278, 47], 1)
