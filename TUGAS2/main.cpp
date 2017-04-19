@@ -186,11 +186,80 @@ void tree(int mirror, int kali) {
     fillPolygon(suns,csuns,90);
 }
 
+static void createShine(point2D_t p[],float r,int n){
+ float a=6.28/n;
+ for(int i=0;i<n;i++){
+        if (i%2==0){
+            p[i].x=r*cos(i*a);
+            p[i].y=r*sin(i*a);
+        } else {
+            p[i].x=0.9*r*cos(i*a);
+            p[i].y=0.9*r*sin(i*a);
+        }
+ }
+}
+
+void shine(int mirrorX, int mirrorY) {
+    point2D_t gunung1[4]={{0,0},{-256*mirrorY,10*mirrorX},{-256*mirrorY,40*mirrorX}};
+    color_t colGunung1[4]={{ 174, 214, 241 },{133, 193, 233},
+                { 214, 234, 248 }};
+    gradatePolygon(gunung1,colGunung1,3);
+
+    for(int i=0;i<4;i++) {
+        if (mirrorX==1) {
+            gunung1[1].y += 50;
+            gunung1[2].y += 50;// + (i*10);
+        } else {
+            gunung1[1].y -= 50;
+            gunung1[2].y -= 50;// + (i*10);
+        }
+        gradatePolygon(gunung1,colGunung1,3);
+    }
+
+    point2D_t gunung2[4]={{0,0},{-10*mirrorY,256*mirrorX},{-40*mirrorY,256*mirrorX}};
+    gradatePolygon(gunung2,colGunung1,3);
+
+    for(int i=0;i<4;i++) {
+        if (mirrorY==1) {
+            gunung2[1].x -= 50;
+            gunung2[2].x -= 50 ;
+        } else {
+            gunung2[1].x += 50;
+            gunung2[2].x += 50 ;
+        }
+        gradatePolygon(gunung2,colGunung1,3);
+    }
+}
+
 void userdraw() {
+    int numSegments;
     // membuat langit
     point2D_t kotak[4]={{-256,256},{256,256},{256,-256},{-256,-256}};
 	color_t col[4]={{133, 193, 233},{ 52, 152, 219 },{ 40, 116, 166 },{ 52, 152, 219 }};
 	gradatePolygon(kotak,col,4);
+
+	// bikin shine
+	shine(1,1);
+    shine(1,-1);
+    shine(-1,1);
+    shine(-1,-1);
+
+    // matahari
+    point2D_t suns[97];
+    point2D_t suns2[97];
+    color_t csuns={241, 196, 15};
+    color_t csuns2={ 192, 57, 43 };
+    //setColor(0,0,0);
+    createShine(suns2,110,97);
+    createCircle(suns,97,90);
+
+    drawPolygon(suns,90);
+    drawPolygon(suns2,90);
+    fillPolygon(suns2,csuns2,90);
+    fillPolygon(suns,csuns,90);
+
+
+
 
    // Membuat bukit 1 kanan
     point2D_t gunung1[4]={{-100,-256},{130,-120},{256,-230},{256,-256}};
@@ -223,6 +292,7 @@ void userdraw() {
     // bikin pohon kiri
     tree(1,1);
     tree(2,-1);
+
 
 }
 
