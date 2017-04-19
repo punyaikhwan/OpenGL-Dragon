@@ -50,6 +50,14 @@ static void createCircle(point2D_t p[],float r,int n){
 	}
 }
 
+static void createCircle(point2D_t p[], point2D_t p0, float r,int n){
+	float a=6.28/n;
+	for(int i=0;i<n;i++){
+		p[i].x=p0.x+r*cos(i*a);
+		p[i].y=p0.y+r*sin(i*a);
+	}
+}
+
 void gradatePolygon(point2D_t p[],color_t col[],int n){
 	glBegin(GL_POLYGON);
 	for(int i=0;i<n;i++) {
@@ -57,6 +65,125 @@ void gradatePolygon(point2D_t p[],color_t col[],int n){
 		glVertex2f(p[i].x,p[i].y);
 	}
 	glEnd();
+}
+
+void awan(int x, int y, int r) {
+    /* mo bikin awan*/
+    point2D_t suns[97];
+    point2D_t position;
+
+    // lingkaran 1
+    position.x = x;//-50;
+    position.y = y;//70;
+    color_t csuns={ 244, 246, 247 };
+    createCircle(suns,position,r,90);
+    drawPolygon(suns,90);
+    fillPolygon(suns,csuns,90);
+
+    //lingkaran 2
+    position.x = x+10;//-40;
+    position.y = y+5;//75;
+    createCircle(suns,position,r,90);
+    drawPolygon(suns,90);
+    fillPolygon(suns,csuns,90);
+
+    //lingkaran 3
+    position.x = x+10;//-30;
+    position.y = y;//70;
+    createCircle(suns,position,r,90);
+    drawPolygon(suns,90);
+    fillPolygon(suns,csuns,90);
+
+    //lingkaran 4
+    position.x = x+30;//-20;
+    position.y = y+10;//80;
+    createCircle(suns,position,r,90);
+    drawPolygon(suns,90);
+    fillPolygon(suns,csuns,90);
+
+    //lingkaran 5
+    position.x = x+40;//-10;
+    position.y = y-10;//60;
+    createCircle(suns,position,r,90);
+    drawPolygon(suns,90);
+    fillPolygon(suns,csuns,90);
+
+    //lingkaran 6
+    position.x = x+55;//5;
+    position.y = y;//70;
+    createCircle(suns,position,r,90);
+    drawPolygon(suns,90);
+    fillPolygon(suns,csuns,90);
+
+    //lingkaran 7
+    position.x = x+15;//-35;
+    position.y = y-10;//60;
+    createCircle(suns,position,r,90);
+    drawPolygon(suns,90);
+    fillPolygon(suns,csuns,90);
+
+    //lingkaran 8
+    position.x = x+60;//10;
+    position.y = y-10;//60;
+    createCircle(suns,position,r,90);
+    drawPolygon(suns,90);
+    fillPolygon(suns,csuns,90);
+}
+
+void tree(int mirror, int kali) {
+    // batang
+    point2D_t gunung1[7]={{-180,-256},{-175,-206},{-200,-170},{-175,-195},
+                        {-160,-180},{-155,-180},{-140,-256}};
+    color_t colGunung1[7]={{110, 44, 0},{110, 44, 200},{ 135, 54, 0 },{ 160, 64, 0 },
+                    {135, 54, 0}, {135, 54, 0}, {110, 44, 0}
+    };
+    if (mirror==2) {
+        int i;
+        for (i=0;i<7;i++) {
+            gunung1[i].x *= -1;
+        }
+    }
+    gradatePolygon(gunung1,colGunung1,7);
+
+    /* mo bikin daun*/
+    point2D_t suns[97];
+    point2D_t position;
+
+    // lingkaran 1
+    position.x = -200*kali;//-50;
+    position.y = -170;//70;
+    color_t csuns={20, 90, 50};
+    createCircle(suns,position,40,90);
+    drawPolygon(suns,90);
+    fillPolygon(suns,csuns,90);
+
+    // lingkaran 2
+    position.x = -180*kali;//-50;
+    position.y = -140;//70;
+    createCircle(suns,position,45,90);
+    drawPolygon(suns,90);
+    fillPolygon(suns,csuns,90);
+
+    // lingkaran 3
+    position.x = -150*kali;//-50;
+    position.y = -170;//70;
+    createCircle(suns,position,30,90);
+    drawPolygon(suns,90);
+    fillPolygon(suns,csuns,90);
+
+    // lingkaran 4
+    position.x = -130*kali;//-50;
+    position.y = -160;//70;
+    createCircle(suns,position,35,90);
+    drawPolygon(suns,90);
+    fillPolygon(suns,csuns,90);
+
+    // lingkaran 5
+    position.x = -150*kali;//-50;
+    position.y = -170;//70;
+    createCircle(suns,position,45,90);
+    drawPolygon(suns,90);
+    fillPolygon(suns,csuns,90);
 }
 
 void userdraw() {
@@ -80,6 +207,22 @@ void userdraw() {
     color_t colGunung3[4]={{ 40, 180, 99 },{35, 155, 86},{ 40, 180, 99 },{35,255,86}};
     gradatePolygon(gunung3,colGunung3,4);
 
+    //bikin awan 1
+    awan(-50,70,15);
+
+    //bikin awan 2
+    awan(-200,120,18);
+
+    //bikin awan 3
+    awan(200,70,20);
+    awan(160,70,15);
+
+    //bikin awan 4
+    awan(40,-40,21);
+
+    // bikin pohon kiri
+    tree(1,1);
+    tree(2,-1);
 
 }
 
