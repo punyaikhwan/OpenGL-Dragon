@@ -7,8 +7,9 @@
 /* Global variables */
 char title[] = "3D Shapes";
 GLfloat anglePyramid = 0.0f;  // Rotational angle for pyramid [NEW]
-GLfloat angleCube = 0.0f;     // Rotational angle for cube [NEW]
+GLfloat angleCube = 0.4f;     // Rotational angle for cube [NEW]
 int refreshMills = 15;        // refresh interval in milliseconds [NEW]
+GLfloat z_axis = 0.2f;
 
 /* Initialize OpenGL Graphics */
 void initGL() {
@@ -35,45 +36,45 @@ void display() {
       // Top face (y = 1.0f)
       // Define vertices in counter-clockwise (CCW) order with normal pointing out
       glColor3f(0.0f, 1.0f, 0.0f);     // Green
-      glVertex3f( 1.0f, 1.0f, -1.0f);
-      glVertex3f(-1.0f, 1.0f, -1.0f);
-      glVertex3f(-1.0f, 1.0f,  1.0f);
-      glVertex3f( 1.0f, 1.0f,  1.0f);
+      glVertex3f( 1.0f, 1.0f, 0.0f);
+      glVertex3f(-1.0f, 1.0f, 0.0f);
+      glVertex3f(-1.0f, 1.0f,  z_axis);
+      glVertex3f( 1.0f, 1.0f,  z_axis);
 
       // Bottom face (y = -1.0f)
       glColor3f(1.0f, 0.5f, 0.0f);     // Orange
-      glVertex3f( 1.0f, -1.0f,  1.0f);
-      glVertex3f(-1.0f, -1.0f,  1.0f);
-      glVertex3f(-1.0f, -1.0f, -1.0f);
-      glVertex3f( 1.0f, -1.0f, -1.0f);
+      glVertex3f( 1.0f, -2.0f,  z_axis);
+      glVertex3f(-1.0f, -2.0f,  z_axis);
+      glVertex3f(-1.0f, -2.0f, 0.0f);
+      glVertex3f( 1.0f, -2.0f, 0.0f);
 
       // Front face  (z = 1.0f)
       glColor3f(1.0f, 0.0f, 0.0f);     // Red
-      glVertex3f( 1.0f,  1.0f, 1.0f);
-      glVertex3f(-1.0f,  1.0f, 1.0f);
-      glVertex3f(-1.0f, -1.0f, 1.0f);
-      glVertex3f( 1.0f, -1.0f, 1.0f);
+      glVertex3f( 1.0f,  1.0f, z_axis);
+      glVertex3f(-1.0f,  1.0f, z_axis);
+      glVertex3f(-1.0f, -2.0f, z_axis);
+      glVertex3f( 1.0f, -2.0f, z_axis);
 
       // Back face (z = -1.0f)
       glColor3f(1.0f, 1.0f, 0.0f);     // Yellow
-      glVertex3f( 1.0f, -1.0f, -1.0f);
-      glVertex3f(-1.0f, -1.0f, -1.0f);
-      glVertex3f(-1.0f,  1.0f, -1.0f);
-      glVertex3f( 1.0f,  1.0f, -1.0f);
+      glVertex3f( 1.0f, -2.0f, 0.0f);
+      glVertex3f(-1.0f, -2.0f, 0.0f);
+      glVertex3f(-1.0f,  1.0f, 0.0f);
+      glVertex3f( 1.0f,  1.0f, 0.0f);
 
       // Left face (x = -1.0f)
       glColor3f(0.0f, 0.0f, 1.0f);     // Blue
-      glVertex3f(-1.0f,  1.0f,  1.0f);
-      glVertex3f(-1.0f,  1.0f, -1.0f);
-      glVertex3f(-1.0f, -1.0f, -1.0f);
-      glVertex3f(-1.0f, -1.0f,  1.0f);
+      glVertex3f(-1.0f,  1.0f,  z_axis);
+      glVertex3f(-1.0f,  1.0f, 0.0f);
+      glVertex3f(-1.0f, -2.0f, 0.0f);
+      glVertex3f(-1.0f, -2.0f,  z_axis);
 
       // Right face (x = 1.0f)
       glColor3f(1.0f, 0.0f, 1.0f);     // Magenta
-      glVertex3f(1.0f,  1.0f, -1.0f);
-      glVertex3f(1.0f,  1.0f,  1.0f);
-      glVertex3f(1.0f, -1.0f,  1.0f);
-      glVertex3f(1.0f, -1.0f, -1.0f);
+      glVertex3f(1.0f,  1.0f, 0.0f);
+      glVertex3f(1.0f,  1.0f,  z_axis);
+      glVertex3f(1.0f, -2.0f,  z_axis);
+      glVertex3f(1.0f, -2.0f, 0.0f);
    glEnd();  // End of drawing color-cube
 
    glutSwapBuffers();  // Swap the front and back frame buffers (double buffering)
