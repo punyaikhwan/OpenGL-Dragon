@@ -1,0 +1,3 @@
+Bahasa yang digunakan yaitu Python.
+Program dapat di-run dengan menggunakan Command-Prompt
+Keterangan cara run program ada di folder doc bagian dokumentasi
