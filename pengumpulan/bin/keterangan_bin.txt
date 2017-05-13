@@ -1,3 +1,5 @@
-Bahasa yang digunakan yaitu Python.
+Bahasa yang digunakan yaitu Python. Tugas yang menggunakan bahasa python yaitu :
+1. Tugas 1 naga
+2. Tugas besar (4) Peta ITB
 Program dapat di-run dengan menggunakan Command-Prompt
 Keterangan cara run program ada di folder doc bagian dokumentasi

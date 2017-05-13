@@ -186,7 +186,7 @@
 	<objidl.h>
 	<cguid.h>
 
-1493007596 c:\program files (x86)\codeblocks\mingw\include\stdlib.h
+1341006776 c:\program files (x86)\codeblocks\mingw\include\stdlib.h
 	<_mingw.h>
 	<stddef.h>
 
@@ -207,8 +207,10 @@
 1301111156 c:\program files (x86)\codeblocks\mingw\include\oleidl.h
 	<objfwd.h>
 
-1426324528 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
-	"freeglut_std.h"
+1254037762 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
 
 1426324528 c:\program files (x86)\codeblocks\mingw\include\gl\freeglut_std.h
 	<windows.h>
@@ -221,13 +223,16 @@
 	<GL/glu.h>
 	<stdlib.h>
 
-1301111164 c:\program files (x86)\codeblocks\mingw\include\gl\gl.h
+1044785826 c:\program files (x86)\codeblocks\mingw\include\gl\gl.h
 
-1301111164 c:\program files (x86)\codeblocks\mingw\include\gl\glu.h
-	<stddef.h>
+1044785826 c:\program files (x86)\codeblocks\mingw\include\gl\glu.h
 	<GL/gl.h>
 
 1493101262 source:f:\itb\smt6\if3260-grafika\opengl-dragon\tugas3-showcase\main.cpp
+	<windows.h>
+	<GL/glut.h>
+
+1494481491 source:e:\itb\semester6\grafika\tugas\opengl-dragon\tugas3-showcase\main.cpp
 	<windows.h>
 	<GL/glut.h>
 
